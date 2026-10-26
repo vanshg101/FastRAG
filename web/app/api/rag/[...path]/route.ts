@@ -56,7 +56,8 @@ async function proxy(request: NextRequest, path: string[]): Promise<Response> {
 
   let upstream: Response;
   try {
-    upstream = await fetch(`${API_URL.replace(/\/$/, "")}/${target}`, init);
+    const upstreamUrl = new URL(target, API_URL.endsWith("/") ? API_URL : `${API_URL}/`);
+    upstream = await fetch(upstreamUrl, init);
   } catch (error) {
     return Response.json(
       { detail: `cannot reach the FastRAG API at ${API_URL}`, error: String(error) },

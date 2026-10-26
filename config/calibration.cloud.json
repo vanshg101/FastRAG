@@ -1,0 +1,10 @@
+{
+  "reranker_threshold": 0.4,
+  "crag_confident_threshold": 0.6,
+  "offtopic_threshold": 0.15,
+  "reranker_fingerprint": "b852c2ffd8d2321085914f29465cfc1ae46fef6cae7f054150288b4c3f6cd921",
+  "embedding_fingerprint": "71de878cbcb3925fe2b120334065a15b9ae353794fc07ab59dba0d17bc668b31",
+  "false_answer_rate": 0.05,
+  "sample_count": 30,
+  "cache_distance_threshold": 0.1
+}

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { AnimatedWave } from "./animated-wave";
 
-const GITHUB_URL = "https://github.com/rohansen856/FastRAG";
+const GITHUB_URL = "https://github.com/vanshg101/FastRAG";
 
 const footerLinks: Record<
   string,
@@ -20,7 +20,7 @@ const footerLinks: Record<
     { name: "Guardrails", href: "/docs/guardrails" },
     { name: "Benchmarks", href: "/docs/benchmarking" },
     { name: "Latency", href: "/docs/latency" },
-    { name: "The team", href: "#developers" },
+
   ],
   Source: [
     { name: "Repository", href: GITHUB_URL, external: true },
@@ -129,7 +129,7 @@ export function FooterSection() {
             rel="noopener noreferrer"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors font-mono"
           >
-            github.com/rohansen856/FastRAG
+            github.com/vanshg101/FastRAG
           </a>
         </div>
       </div>

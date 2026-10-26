@@ -8,12 +8,12 @@ import { Menu, X } from "lucide-react";
 const navLinks = [
   { name: "Features", href: "/#features" },
   { name: "How it works", href: "/#how-it-works" },
-  { name: "Developers", href: "/#developers" },
+
   { name: "Docs", href: "/docs" },
   { name: "Hosting", href: "/#hosting" },
 ];
 
-const GITHUB_URL = "https://github.com/rohansen856/FastRAG";
+const GITHUB_URL = "https://github.com/vanshg101/FastRAG";
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);

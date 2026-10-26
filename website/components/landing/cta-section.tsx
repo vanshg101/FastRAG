@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Github } from "lucide-react";
 import { AnimatedTetrahedron } from "./animated-tetrahedron";
 
-const GITHUB_URL = "https://github.com/rohansen856/FastRAG";
+const GITHUB_URL = "https://github.com/vanshg101/FastRAG";
 
 export function CtaSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +77,7 @@ export function CtaSection() {
                 </div>
 
                 <p className="text-sm text-muted-foreground mt-8 font-mono">
-                  github.com/rohansen856/FastRAG
+                  github.com/vanshg101/FastRAG
                 </p>
               </div>
 

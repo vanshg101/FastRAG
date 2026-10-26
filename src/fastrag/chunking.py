@@ -320,7 +320,7 @@ async def chunk_document(
             if not text:
                 continue
             chunk_id = str(
-                uuid.uuid5(uuid.NAMESPACE_URL, f"{document.document_id}:{strategy.name}:{text}")
+                uuid.uuid5(uuid.NAMESPACE_URL, f"{document.document_id}:{strategy.name}:{index}:{text}")
             )
             payload: dict[str, Any] = {
                 "chunk_id": chunk_id,

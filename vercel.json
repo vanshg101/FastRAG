@@ -1,9 +1,68 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "functions": {
-    "src/fastrag/api.py": {
-      "maxDuration": 300,
-      "excludeFiles": "{web/**,website/**,tests/**,docs/**,bench/**,eval/**,scripts/**,**/*.md}"
+  "services": {
+    "app": {
+      "root": ".",
+      "framework": "fastapi",
+      "functions": {
+        "src/fastrag/api.py": {
+          "maxDuration": 300
+        }
+      }
+    },
+    "website": {
+      "root": "website",
+      "framework": "nextjs",
+      "functions": {
+        "app/api/rag/[...path]/route.ts": {
+          "maxDuration": 60
+        }
+      },
+      "bindings": [
+        {
+          "type": "service",
+          "service": "app",
+          "format": "url",
+          "env": "FASTRAG_API_URL"
+        }
+      ]
+    },
+    "web": {
+      "root": "web",
+      "framework": "nextjs",
+      "functions": {
+        "app/api/rag/[...path]/route.ts": {
+          "maxDuration": 60
+        }
+      },
+      "bindings": [
+        {
+          "type": "service",
+          "service": "app",
+          "format": "url",
+          "env": "FASTRAG_API_URL"
+        }
+      ]
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/v1/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    },
+    {
+      "source": "/health/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "website"
+      }
+    }
+  ]
 }

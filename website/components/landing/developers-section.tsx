@@ -179,7 +179,7 @@ export function DevelopersSection() {
 
             <div className="mt-6 flex items-center gap-6 text-sm">
               <a
-                href="https://github.com/rohansen856/FastRAG"
+                href="https://github.com/vanshg101/FastRAG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:underline underline-offset-4"
