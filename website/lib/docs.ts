@@ -1,4 +1,4 @@
-const GITHUB_URL = "https://github.com/rohansen856/FastRAG";
+const GITHUB_URL = "https://github.com/vanshg101/FastRAG";
 
 export type DocPage = {
   slug: string;

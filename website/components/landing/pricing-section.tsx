@@ -20,7 +20,7 @@ const profiles = [
       "Benchmark target: <200ms retrieval P95",
     ],
     cta: "See local setup",
-    href: "https://github.com/rohansen856/FastRAG/blob/master/docs/local-setup.md",
+    href: "https://github.com/vanshg101/FastRAG/blob/master/docs/local-setup.md",
     popular: false,
   },
   {
@@ -41,7 +41,7 @@ const profiles = [
       "Sparse retrieval off (512 MB RAM)",
     ],
     cta: "See cloud env",
-    href: "https://github.com/rohansen856/FastRAG/blob/master/.env.cloud.example",
+    href: "https://github.com/vanshg101/FastRAG/blob/master/.env.cloud.example",
     popular: true,
   },
   {
@@ -61,7 +61,7 @@ const profiles = [
       "Golden gate + bench-latency both profiles",
     ],
     cta: "Read providers",
-    href: "https://github.com/rohansen856/FastRAG/blob/master/docs/providers.md",
+    href: "https://github.com/vanshg101/FastRAG/blob/master/docs/providers.md",
     popular: false,
   },
 ];
@@ -144,7 +144,7 @@ export function PricingSection() {
           Cloud hops will not meet the local 200ms retrieval target - that number is measured on
           the local profile only.{" "}
           <a
-            href="https://github.com/rohansen856/FastRAG/blob/master/docs/latency.md"
+            href="https://github.com/vanshg101/FastRAG/blob/master/docs/latency.md"
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-4 hover:text-foreground transition-colors"
