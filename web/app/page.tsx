@@ -25,7 +25,8 @@ async function loadStrategies(): Promise<StrategyInfo> {
   const url = process.env.FASTRAG_API_URL ?? "http://localhost:8000";
   const token = process.env.FASTRAG_QUERY_TOKEN ?? "";
   try {
-    const response = await fetch(`${url.replace(/\/$/, "")}/v1/strategies`, {
+    const targetUrl = new URL("v1/strategies", url.endsWith("/") ? url : `${url}/`);
+    const response = await fetch(targetUrl, {
       headers: { Authorization: `Bearer ${token}` },
       cache: "no-store",
     });
