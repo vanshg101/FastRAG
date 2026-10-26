@@ -23,7 +23,7 @@ interface StrategyInfo {
  */
 async function loadStrategies(): Promise<StrategyInfo> {
   const url = process.env.FASTRAG_API_URL ?? "http://localhost:8000";
-  const token = process.env.FASTRAG_QUERY_TOKEN ?? "";
+  const token = process.env.FASTRAG_QUERY_TOKEN ?? process.env.FASTRAG_QUERY_API_KEY ?? "";
   try {
     const targetUrl = new URL("v1/strategies", url.endsWith("/") ? url : `${url}/`);
     const response = await fetch(targetUrl, {

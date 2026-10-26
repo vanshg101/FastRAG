@@ -10,7 +10,7 @@ import { NextRequest } from "next/server";
  */
 
 const API_URL = process.env.FASTRAG_API_URL ?? "http://localhost:8000";
-const API_TOKEN = process.env.FASTRAG_QUERY_TOKEN ?? "";
+const API_TOKEN = process.env.FASTRAG_QUERY_TOKEN ?? process.env.FASTRAG_QUERY_API_KEY ?? "";
 
 // Streaming responses must not be buffered or statically optimised.
 export const dynamic = "force-dynamic";
